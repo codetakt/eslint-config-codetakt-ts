@@ -1,0 +1,8 @@
+{
+  "name": "eslint-config-codetakt-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:codetakt/eslint-config-codetakt-ts.git",
+  "author": "Yuya Tanaka <yuya.presto@gmail.com>",
+  "license": "MIT"
+}
