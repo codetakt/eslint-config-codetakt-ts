@@ -2,8 +2,8 @@
   "name": "eslint-config-codetakt-ts",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:codetakt/eslint-config-codetakt-ts.git",
-  "author": "Yuya Tanaka <yuya.presto@gmail.com>",
+  "homepage": "https://github.com/codetakt/eslint-config-codetakt-ts",
+  "repository": "https://github.com/codetakt/eslint-config-codetakt-ts.git",
   "license": "MIT",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.28.0",
