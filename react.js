@@ -8,7 +8,7 @@ module.exports = {
     'react/self-closing-comp': 'warn',
 
     'react-hooks/rules-of-hooks': 'error',
-    // 'react-hooks/exhaustive-deps': 'warn', // want to make it error, but we should disable it for useEffect.
+    'react-hooks/exhaustive-deps': 'warn', // want to make it error, but we should disable it for useEffect.
 
     /* Disable rules in recommended */
     'react/prop-types': 'off', // ensured by TypeScript
