@@ -6,6 +6,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
+    "prettier/@typescript-eslint",
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -35,8 +36,6 @@ module.exports = {
     '@typescript-eslint/camelcase': 'off',
     // Too explicit
     '@typescript-eslint/explicit-function-return-type': 'off',
-    // Prettier
-    '@typescript-eslint/member-delimiter-style': 'off',
     // Empty function is used to match to interface definition while it is actually no-op.
     '@typescript-eslint/no-empty-function': 'off',
     // Too strict
