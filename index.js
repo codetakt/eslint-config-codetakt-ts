@@ -33,13 +33,13 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'prettier',
       ],
-      // You need specify parser, add this to your config:
-      // parserOptions: {
-      //   sourceType: 'module',
-      //   project: './tsconfig.json',
-      //   // https://github.com/typescript-eslint/typescript-eslint/issues/251
-      //   tsconfigRootDir: __dirname,
-      // },
+      parserOptions: {
+        sourceType: 'module',
+        project: './tsconfig.json',
+        // You need specify parser, add this to your config:
+        // https://github.com/typescript-eslint/typescript-eslint/issues/251
+        // tsconfigRootDir: __dirname,
+      },
       rules: {
         '@typescript-eslint/no-floating-promises': 'warn',
         '@typescript-eslint/no-useless-constructor': 'error',
