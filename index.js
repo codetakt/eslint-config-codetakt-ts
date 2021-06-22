@@ -22,7 +22,8 @@ module.exports = {
     {
       files: ['*.js', '*.jsx'],
       rules: {
-        'no-undef': 'error' // No TypeScript here
+        'no-undef': 'error', // No TypeScript here
+        'no-unused-vars': ['warn', { ignoreRestSiblings: true, argsIgnorePattern: '^_' }],
       }
     },
     {
