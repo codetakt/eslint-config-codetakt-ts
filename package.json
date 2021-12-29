@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-codetakt-ts",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "main": "index.js",
   "homepage": "https://github.com/codetakt/eslint-config-codetakt-ts",
   "repository": "https://github.com/codetakt/eslint-config-codetakt-ts.git",
   "license": "MIT",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.0",
-    "@typescript-eslint/parser": "^4.28.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0"
+    "@typescript-eslint/eslint-plugin": ">=4.28.0 <6",
+    "@typescript-eslint/parser": ">=4.28.0 <6",
+    "eslint-config-prettier": ">=8.3.0",
+    "eslint-plugin-prettier": ">=3.4.0"
   }
 }
