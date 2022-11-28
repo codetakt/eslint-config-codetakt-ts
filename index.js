@@ -44,7 +44,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'warn',
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/no-misused-promises': 'error', // warn for `if (promise)` and `forEach(async () => ...)` (note: forEach takes void func)
-        '@typescript-eslint/prefer-nullish-coalescing': ['warn', { forceSuggestionFixer: true }],
+        '@typescript-eslint/prefer-nullish-coalescing': 'warn',
         '@typescript-eslint/prefer-optional-chain': 'warn',
         '@typescript-eslint/unbound-method': 'error', // Warn for unbound this of `foo(classInstance.method)` (`.bind(instance)` is required)
 
