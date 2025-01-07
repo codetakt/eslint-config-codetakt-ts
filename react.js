@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:react/recommended', 'prettier'],
+  extends: ['plugin:react/recommended'],
   plugins: ['react', 'react-hooks'],
   rules: {
     'react/jsx-boolean-value': 'warn',
