@@ -8,8 +8,19 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=4.28.0",
     "@typescript-eslint/parser": ">=4.28.0",
+    "eslint": ">=9.27.0",
     "eslint-config-prettier": ">=8.3.0",
-    "eslint-plugin-prettier": ">=3.4.0"
+    "eslint-plugin-prettier": ">=3.4.0",
+    "eslint-plugin-react": ">=7.37.5",
+    "eslint-plugin-react-hooks": ">=5.2.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1"
