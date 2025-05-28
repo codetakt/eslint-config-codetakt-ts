@@ -2,6 +2,7 @@
   "name": "eslint-config-codetakt-ts",
   "version": "2.0.6",
   "main": "index.js",
+  "types": "index.d.ts",
   "homepage": "https://github.com/codetakt/eslint-config-codetakt-ts",
   "repository": "https://github.com/codetakt/eslint-config-codetakt-ts.git",
   "license": "MIT",
