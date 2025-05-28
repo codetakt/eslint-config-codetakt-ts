@@ -20,13 +20,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx'],
-      rules: {
-        'no-undef': 'error', // No TypeScript here
-        'no-unused-vars': ['warn', { ignoreRestSiblings: true, argsIgnorePattern: '^_' }],
-      }
-    },
-    {
       files: ['*.ts', '*.tsx'],
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
