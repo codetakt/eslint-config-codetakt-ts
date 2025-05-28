@@ -1,34 +1,37 @@
 const noRestrictedImportsRules = require('./noRestrictedImportsRules')
 
-module.exports = {
-  extends: [
-    'eslint:recommended',
-  ],
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  rules: {
-    eqeqeq: ['error', 'always', { null: 'ignore' }],
-    'no-restricted-imports': ['error', noRestrictedImportsRules],
-    'object-shorthand': 'warn',
-    'no-useless-rename': 'warn',
-    'prefer-arrow-callback': 'error',
+/** @return {import('eslint').Linter.Config[]} */
+module.exports = function () {
+  const js = require('@eslint/js')
+  const tseslint = require('typescript-eslint')
 
-    /* Override recommended */
-    'no-constant-condition': ['error', { "checkLoops": false }], // Allow `while (true)`
-  },
-  overrides: [
+  return [
+    js.configs.recommended,
+    tseslint.configs.eslintRecommended,
+    ...tseslint.configs.recommended,
     {
-      files: ['*.ts', '*.tsx'],
-      extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-      ],
-      parserOptions: {
-        sourceType: 'module',
-        project: './tsconfig.json',
-        // You need specify parser, add this to your config:
-        // https://github.com/typescript-eslint/typescript-eslint/issues/251
-        // tsconfigRootDir: __dirname,
+      languageOptions: {
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: __dirname,
+        },
       },
+    },
+    {
+      name: 'eslint-config-codetakt-ts/base',
+      rules: {
+        eqeqeq: ['error', 'always', { null: 'ignore' }],
+        'no-restricted-imports': ['error', noRestrictedImportsRules],
+        'object-shorthand': 'warn',
+        'no-useless-rename': 'warn',
+        'prefer-arrow-callback': 'error',
+
+        /* Override recommended */
+        'no-constant-condition': ['error', { checkLoops: false }], // Allow `while (true)`
+      },
+    },
+    {
+      name: 'eslint-config-codetakt-ts/recommended',
       rules: {
         '@typescript-eslint/no-floating-promises': 'warn',
         '@typescript-eslint/no-useless-constructor': 'error',
@@ -59,7 +62,7 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'off',
         // Allow hoisting
         '@typescript-eslint/no-use-before-define': 'off',
-      }
+      },
     },
-  ],
+  ]
 }
