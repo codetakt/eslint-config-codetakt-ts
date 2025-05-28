@@ -65,10 +65,5 @@ module.exports = {
         '@typescript-eslint/no-use-before-define': 'off',
       }
     },
-    {
-      files: ['webpack*.config.js', '.eslintrc*.js'],
-      globals: { module: true },
-      env: { node: true },
-    },
   ],
 }
