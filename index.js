@@ -3,12 +3,9 @@ const noRestrictedImportsRules = require('./noRestrictedImportsRules')
 module.exports = {
   extends: [
     'eslint:recommended',
-    'prettier',
   ],
-  plugins: ['prettier', '@typescript-eslint/eslint-plugin'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   rules: {
-    'prettier/prettier': 'warn',
-
     eqeqeq: ['error', 'always', { null: 'ignore' }],
     'no-restricted-imports': ['error', noRestrictedImportsRules],
     'object-shorthand': 'warn',
@@ -24,7 +21,6 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
-        'prettier',
       ],
       parserOptions: {
         sourceType: 'module',
