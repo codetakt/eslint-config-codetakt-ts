@@ -2,13 +2,44 @@
   "name": "eslint-config-codetakt-ts",
   "version": "2.0.6",
   "main": "index.js",
+  "types": "index.d.ts",
   "homepage": "https://github.com/codetakt/eslint-config-codetakt-ts",
   "repository": "https://github.com/codetakt/eslint-config-codetakt-ts.git",
   "license": "MIT",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=4.28.0",
-    "@typescript-eslint/parser": ">=4.28.0",
-    "eslint-config-prettier": ">=8.3.0",
-    "eslint-plugin-prettier": ">=3.4.0"
+    "@eslint/js": ">=9.27.0",
+    "eslint": ">=9.27.0",
+    "eslint-config-prettier": ">=10.1.5",
+    "eslint-plugin-prettier": ">=5.4.0",
+    "eslint-plugin-react": ">=7.37.5",
+    "eslint-plugin-react-hooks": ">=5.2.0",
+    "typescript": ">=5.8.2",
+    "typescript-eslint": ">=8.33.0"
+  },
+  "peerDependenciesMeta": {
+    "@eslint/js": {
+      "optional": true
+    },
+    "eslint-config-prettier": {
+      "optional": true
+    },
+    "eslint-plugin-prettier": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    },
+    "typescript-eslint": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1"
   }
 }
