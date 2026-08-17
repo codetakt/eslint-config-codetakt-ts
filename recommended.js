@@ -13,7 +13,6 @@ module.exports = function () {
       languageOptions: {
         parserOptions: {
           projectService: true,
-          tsconfigRootDir: __dirname,
         },
       },
     },
@@ -47,9 +46,8 @@ module.exports = function () {
 
         /* Disable rules in recommended */
         // I think it is too strict to enforce Record<string, unknown> instead of {} (especially for default prop type parameter).
-        '@typescript-eslint/ban-types': 'off',
-        // Some API needs snake case type, and rarely violated
-        '@typescript-eslint/camelcase': 'off',
+        // Note: @typescript-eslint/ban-types was removed in v8, successor is @typescript-eslint/no-restricted-types
+        '@typescript-eslint/no-restricted-types': 'off',
         // Too explicit
         '@typescript-eslint/explicit-function-return-type': 'off',
         // It enforces all exported funcs to have explicit return type. Too explicit.
@@ -57,7 +55,8 @@ module.exports = function () {
         // Empty function is used to match to interface definition while it is actually no-op.
         '@typescript-eslint/no-empty-function': 'off',
         // Rewriting `interface Foobar extends Baz {}` to `type Foobar = Baz` is blah
-        '@typescript-eslint/no-empty-interface': 'off',
+        // Note: @typescript-eslint/no-empty-interface was removed in v8, successor is @typescript-eslint/no-empty-object-type
+        '@typescript-eslint/no-empty-object-type': 'off',
         // Too strict
         '@typescript-eslint/no-non-null-assertion': 'off',
         // Allow hoisting

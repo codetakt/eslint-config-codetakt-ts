@@ -5,7 +5,7 @@ module.exports = function () {
 
   return [
     reactPlugin.configs.flat.recommended,
-    reactHooks.configs['recommended-latest'],
+    reactHooks.configs.flat['recommended-latest'],
     {
       name: 'eslint-config-codetakt-ts/react',
       rules: {
@@ -21,6 +21,7 @@ module.exports = function () {
         /* Disable rules in recommended */
         'react/prop-types': 'off', // ensured by TypeScript
         'react/display-name': 'off', // too many useless warnings
+        'react/react-in-jsx-scope': 'off', // Not needed with React 17+ JSX transform
       },
       settings: {
         react: {
